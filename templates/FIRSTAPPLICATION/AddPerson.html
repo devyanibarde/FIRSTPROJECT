@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
     </head>
     <body>
+        <h1>Add Data:</h1><br />
+        <hr>
         <form method="POST">
             {{ p.as_p }}
             {% csrf_token %}

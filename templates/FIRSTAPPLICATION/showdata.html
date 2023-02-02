@@ -1,0 +1,22 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    </head>
+    <body>
+        <h1>All Data:</h1>
+        <br />
+        <hr>
+        <br />
+        {% if data %}
+            <ol>
+            {% for p in data %}
+                <li>{{ p.first_name }} &nbsp; {{ p.last_name }}</li><br />
+            {% endfor %}
+            </ol>
+        {% else %}
+            <h3>No Data Found</h3>
+        {% endif %}
+    </body>
+</html>
